@@ -4,9 +4,15 @@ Thank you for taking our course. Completing the following tasks will prepare you
 
 ### Task 1: Setting up your repository.
 - Configure GitHub for ssh access. You need to generate a key pair and add the public key to your GitHub account.
-  - To generate your key follow the steps in: https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
-  - How to add a key is described here: https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account
-- Hit the green `Code`-button in the upper right corner of this repository. Select the `SSH` tab and copy the link to your repository. This is necessary to clone your github repository onto your local machine.
+  - To generate your key follow the steps [here](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent). For Ubuntu the necessary steps are:
+    1. Open a terminal by pressing `Ctrl+Alt+T`.
+    2. Execute
+      ```bash
+      ssh-keygen -t ed25519 -C "your_email@example.com"
+      ```
+    3. Press Enter twice and remember where you saved the key (this should be prompted/configured in the step above).
+  - How to add a SSH key to GitHub is described here: [Adding a new SSH key to your GitHub account](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
+- Hit the green `Code`-button in the upper right corner of this repository. Select the `SSH` tab and copy the link leading to your repository. This is necessary to clone your github repository onto your local machine.
 - Open a terminal by pressing `Ctrl+Alt+T`.
 - Clone this repository by running 
   ```bash
@@ -18,16 +24,18 @@ Thank you for taking our course. Completing the following tasks will prepare you
 In Vscode, you can now open a rendered version of this readme. Right-click the file and select `Open Preview`.
 
 ### Task 2: Downloading and installing Miniconda.
+To develop and execute our python code, we use a python container software called miniconda. Using miniconda you can create an `environment` which holds python and all the required software to run the given scripts.
 - Navigate to https://docs.conda.io/en/latest/miniconda.html in your favorite browser.
 The HRZ-Pool computers run Ubuntu Linux. Download the `Miniconda3 Linux 64-bit` file.
 
 - Open the terminal on your machine by pressing `Ctrl+Alt+T`. Navigate into the Downloads folder by typing `cd Downloads`. Before running the installer, set the executable bit by typing `chmod +x Miniconda3-latest-Linux-x86_64.sh`. Install Miniconda via `./Miniconda3-latest-Linux-x86_64.sh`.
-- Close your terminal and open it again. Check if you can see the `(base)` environment name on the left hand side of your command line. This means that conda is installed correctly
+- Close your terminal and open it again. Check if you can see the `(base)` environment name on the left hand side of your command line. This means that (mini)conda is installed correctly
 
 
 ### Task 3: Setting up Vscode for python development
-- Click on the extensions tab or press `Ctrl+Shift+X`. Install the `Python` and `Remote-SSH` extensions. Choose the versions provided by Microsoft.
-- Make the Miniconda interpreter your default in Vscode by pressing `Ctrl+Shift+P`. A terminal opens. Type `select interpreter` and press enter. In the following dialogue, choose the `base` environment. 
+- Open Visual Studio Code (Vscode).
+- Click on the extensions tab in Vscode (on the left hand side) or press `Ctrl+Shift+X`. Install the `Python` and `Remote-SSH` extensions. Choose the versions provided by Microsoft.
+- Make the Miniconda interpreter your default in Vscode by pressing `Ctrl+Shift+P`. Type `select interpreter` and press enter. In the following dialogue, choose the `base` environment. 
 
 ### Task 4: Installing dependencies
 - Open a terminal by pressing `Ctrl+Alt+T`. Navigate into this directory by typing `cd day_01_exercise_intro-yourname`. Type
@@ -38,7 +46,7 @@ The HRZ-Pool computers run Ubuntu Linux. Download the `Miniconda3 Linux 64-bit` 
   to install the python packages required for this exercise.
 
 ### Task 5: Run an automatic test.
-- Scientific software must provide reproducible results. Automatic testing ensures our software runs reliably. We recommend Nox for test automation https://nox.thea.codes/en/stable/. 
+Scientific software must provide reproducible results. Automatic testing ensures our software runs reliably. We recommend Nox for test automation https://nox.thea.codes/en/stable/. 
 - To run some of the tests we prepared for you type,
     ```bash
     nox -s test
@@ -87,7 +95,7 @@ At the end of the day after you finished all your tasks we want to save the resu
   to check if there are any files to commit. These are marked red.
 - Add all the red files by using
   ```bash
-  git add *
+  git add -A
   ```
 - These files are now staged and can be commited. If you are commiting for the first time you will have to specify your github email address and username by typing
   ```bash

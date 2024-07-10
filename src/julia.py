@@ -33,3 +33,4 @@ if __name__ == "__main__":
     scaled = [[log10(val + 1e-12) for val in row] for row in mesh]
 
     # TODO: use plt.imshow and plt.plot to explore the scaled values.
+    # TODO: combine plt.imshow and plt.colorbar.
