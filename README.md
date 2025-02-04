@@ -19,17 +19,17 @@ Thank you for taking our course. Completing the following tasks will prepare you
   git clone <ssh-link>
   ```
   in the terminal and substitute the `<ssh-link>` with the link you just copied. After pressing `Enter` your repository will be downloaded into your current working directory.
-- Navigate into the downloaded directory by typing `cd exercise_intro-yourname`. Use `ls` to list the contents of the folder you are currently working in. If Visual Studio Code is installed correctly you can open it from the terminal by typing `code .`.
+- Navigate into the downloaded directory via the `cd` command. Use `ls` to list the contents of the folder you are currently working in. If Visual Studio Code is installed correctly, you can open it from the terminal by typing `code .`.
 
 In Vscode, you can now open a rendered version of this readme. Right-click the file and select `Open Preview`.
 
-### Task 2: Downloading and installing Miniconda.
-To develop and execute our python code, we use a python container software called miniconda. Using miniconda you can create an `environment` which holds python and all the required software to run the given scripts.
-- Navigate to https://docs.conda.io/en/latest/miniconda.html in your favourite browser.
+### Task 2: Downloading and installing Conda.
+To develop and execute our Python code, we use a Python container software called Conda. Using `Conda` you can create an `environment` which holds Python and all the required software to run the given scripts.
+- Navigate to [https://conda-forge.org/](https://conda-forge.org/download/) in your favourite browser.
 The HRZ-Pool computers run Ubuntu Linux. Download the `Miniconda3 Linux 64-bit` file.
 
-- Open the terminal on your machine by pressing `Ctrl+Alt+T`. Navigate into the Downloads folder by typing `cd Downloads`. Before running the installer, set the executable bit by typing `chmod +x Miniconda3-latest-Linux-x86_64.sh`. Install Miniconda via `./Miniconda3-latest-Linux-x86_64.sh`.
-- Finally, execute this command `source ~/.bashrc`. Check if you can see the `(base)` environment name on the left-hand side of your command line. This means that (mini)conda is installed correctly.
+- Open the terminal on your machine by pressing `Ctrl+Alt+T`. Navigate into the Downloads folder by typing `cd Downloads`. Before running the installer, set the executable bit by typing `chmod +x Miniforge3-Linux-x86_64.sh`. Install Conda via `./Miniforge3-Linux-x86_64.sh`.
+- Close your terminal and open it again. Check if you can see the `(base)` environment name on the left-hand side of your command line. This means that conda is installed correctly
 
 
 ### Task 3: Setting up Vscode for Python development
