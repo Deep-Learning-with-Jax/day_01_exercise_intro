@@ -26,7 +26,7 @@ In Vscode, you can now open a rendered version of this readme. Right-click the f
 ### Task 2: Downloading and installing Conda.
 To develop and execute our Python code, we use a Python container software called Conda. Using `Conda` you can create an `environment` which holds Python and all the required software to run the given scripts.
 - Navigate to [https://conda-forge.org/](https://conda-forge.org/download/) in your favourite browser.
-The HRZ-Pool computers run Ubuntu Linux. Download the `Miniconda3 Linux 64-bit` file.
+The HRZ-Pool computers run Ubuntu Linux. Download the `Miniforge3-Linux-x86_64.sh` file.
 
 - Open the terminal on your machine by pressing `Ctrl+Alt+T`. Navigate into the Downloads folder by typing `cd Downloads`. Before running the installer, set the executable bit by typing `chmod +x Miniforge3-Linux-x86_64.sh`. Install Conda via `./Miniforge3-Linux-x86_64.sh`.
 - Close your terminal and open it again. Check if you can see the `(base)` environment name on the left-hand side of your command line. This means that conda is installed correctly
